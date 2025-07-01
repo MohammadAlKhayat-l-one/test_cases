@@ -110,4 +110,74 @@
   1. Leave one or more required fields empty or enter invalid values.
   2. Enter the correct current password.
   3. Submit the form.
-- **Expected Result:** Update fails and error messages indicate which fields are missing or invalid. 
+- **Expected Result:** Update fails and error messages indicate which fields are missing or invalid.
+
+---
+
+## 🛒 Shopping Cart
+
+### Test Case 1: Add Product to Cart from Product Listing
+- **Preconditions:** User is on the product listing page.
+- **Test steps:**
+  1. Locate a product in the listing.
+  2. Click the "Add to Cart" button for that product.
+- **Expected results:** Product is added to the cart; cart icon updates to reflect the new item count.
+
+### Test Case 2: Add Product to Cart from Product Detail Page
+- **Preconditions:** User is on a product detail page.
+- **Test steps:**
+  1. Click the "Add to Cart" button.
+- **Expected results:** Product is added to the cart; cart icon updates to reflect the new item count.
+
+### Test Case 3: View Cart Contents
+- **Preconditions:** User has one or more products in the cart.
+- **Test steps:**
+  1. Click the cart icon or navigate to the cart page.
+- **Expected results:** Cart displays a list of added products, each showing product name, quantity, price, and total cost.
+
+### Test Case 4: Update Product Quantity in Cart
+- **Preconditions:** User has at least one product in the cart.
+- **Test steps:**
+  1. Go to the cart page.
+  2. Change the quantity of a product to a valid number.
+- **Expected results:** Product quantity updates; total price recalculates correctly.
+
+### Test Case 5: Remove Product from Cart
+- **Preconditions:** User has at least one product in the cart.
+- **Test steps:**
+  1. Go to the cart page.
+  2. Click the "Remove" button for a product.
+- **Expected results:** Product is removed from the cart; total price and cart icon update accordingly.
+
+### Test Case 6: Cart Persistence for Logged-in Users
+- **Preconditions:** User is logged in and has products in the cart.
+- **Test steps:**
+  1. Log out and log back in.
+  2. Navigate to the cart page.
+- **Expected results:** Cart retains previously added products and their quantities.
+
+### Test Case 7: Cart Icon Displays Total Number of Items
+- **Preconditions:** User has products in the cart.
+- **Test steps:**
+  1. Add products to the cart.
+  2. Observe the cart icon.
+- **Expected results:** Cart icon displays the correct total number of items in the cart.
+
+### Test Case 8: Prevent Adding Invalid Quantities
+- **Preconditions:** User is on a product listing or detail page.
+- **Test steps:**
+  1. Attempt to add a product to the cart with a quantity of zero or a negative number.
+- **Expected results:** System prevents the action and displays a validation error.
+
+### Test Case 9: Checkout Button Disabled When Cart is Empty
+- **Preconditions:** Cart is empty.
+- **Test steps:**
+  1. Navigate to the cart page.
+- **Expected results:** Checkout button is disabled and cannot be clicked.
+
+### Test Case 10: Total Price Updates Correctly
+- **Preconditions:** User has multiple products in the cart.
+- **Test steps:**
+  1. Change the quantity of a product or remove a product from the cart.
+- **Expected results:** Total price updates accurately to reflect the changes.
+
